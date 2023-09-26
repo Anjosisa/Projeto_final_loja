@@ -120,9 +120,9 @@ class Loja:
         self.vetor = vetor-1
         return self.produtos.pop(vetor)
 
-    def excluir_cliente(self, vetor):
-        self.vetor = vetor-1
-        return self.clientes.pop(vetor)
+    def excluir_cliente(self, vetorc):
+        self.vetorc = vetorc-1
+        return self.clientes.pop(vetorc)
 
 
 

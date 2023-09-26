@@ -61,7 +61,7 @@ while sair == False:
                                 endereco = input("ENDEREÇO: ")
                                 senha = input("SENHA: ")
 
-                                cliente = Cliente(nome, cpf, idade, endereco, senha, idc)
+                                cliente = cliente(nome, cpf, idade, endereco, senha, idc)
                                 loja.inserir_cliente(cliente, idc)
                                 print("\nCliente cadastrado com sucesso!")
                                 os.system("pause")
@@ -93,7 +93,7 @@ while sair == False:
                                 descricao = input("DESCRIÇÃO DO PRODUTO: ")
                                 valor = float(input("VALOR: "))
 
-                                produto = Produto(nome_produto, descricao, valor, idp)
+                                produto = produto(nome_produto, descricao, valor, idp)
 
                                 loja.inserir_produto(produto, idp)
                                 print("\nProduto cadastrado com sucesso!")
@@ -102,12 +102,21 @@ while sair == False:
 
                             case 4:
                                 os.system("cls")
-                                print("--- LISTA DE CLIENTES ---\n")
-                                loja.listarClientes()
+                                print("---  EXCLUIR PRODUTO ---\n")
+                                loja.listarProdutos()
+                                excluir = int(input("\nDigite a opção que deseja excluir: "))
+                                loja.excluir_produto(excluir)
                                 os.system("pause")
                                 os.system("cls")
                             case 5:
-                                pass
+                                os.system("cls")
+                                print("---  EXCLUIR CLIENTE ---\n")
+                                loja.listarClientes()
+                                excluirc = int(input("Digite o id do cliente que deseja excluir: "))
+                                loja.excluir_cliente(excluirc)
+                                loja.listarClientes()
+                                os.system("pause")
+                                os.system("cls")
                             case 6:
                                 os.system("cls")
                                 print("--- LISTA DE CLIENTES ---\n")
