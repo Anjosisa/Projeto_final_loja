@@ -24,7 +24,7 @@ class Cliente:
         self.endereco = endereço
         self.senhacli = senha
         self.id = idc
-        
+        self.carrinho = []
     
     def getNome(self):
         return self.nome
@@ -43,6 +43,30 @@ class Cliente:
 
     def getId(self):
         return self.id
+
+    def inserir_produto(self, produto, qtd):
+        self.produto = produto
+        self.qtdp = qtd
+        self.lista_compra.append(self.produto)
+        print(f"{produto.get_nome_produto()} foi adicionado ao carrinho.")
+
+    def listar_produtos(self):
+        cont = 0
+        if len(self.carrinho) == 0:
+            print("Seu carrinho está vazio.")
+        else:
+            print("Itens no carrinho:\n")
+            for produto in self.carrinho:
+                cont += 1
+                print(f"Nome: {produto.get_nome_produto()} | Valor: R${produto.get_valor()}")
+        
+
+    def getLista(self, vetor):
+        return self.lista_compra[vetor]
+
+    def delProduto(self, vetor):
+        self.vetor_lista = vetor - 1
+        self.lista_compra.pop(self.vetor_lista)
 
 
 class Produto:
@@ -64,27 +88,6 @@ class Produto:
 
     def get_idp(self):
         return self.idp
-
-class Carrinho:
-
-    lista_compra = []
-
-    def inserir_produto(self, produto):
-        self.produto = produto
-        self.lista_compra.append(self.produto)
-
-    def listar_produtos(self):
-        cont = 0
-        for produto in self.lista_compra:
-            cont += 1
-            print(f"{cont}) Nome: {produto.getNome()} | Valor: {produto.getValor()}")
-
-    def getLista(self, vetor):
-        return self.lista_compra[vetor]
-
-    def delProduto(self, vetor):
-        self.vetor_lista = vetor - 1
-        self.lista_compra.pop(self.vetor_lista)
         
 class Loja:
     def __init__(self, nome, endereco, cnpj):
@@ -129,7 +132,7 @@ class Loja:
     def excluir_cliente(self, vetorc):
         self.vetorc = vetorc-1
         return self.clientes.pop(vetorc)
-
+    
 
 
 loja = Loja("VS STORE", "Av. das Codificações, Nº1011", 123456789)
