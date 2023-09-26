@@ -4,7 +4,7 @@
 
 **Tema do E-commerce:** Venda de produtos diversos
 
-Nosso E-commerce foi criado com o intuito de ser um local de Venda de produtos.
+*Nosso E-commerce foi criado com o intuito de ser um local de Venda de produtos.*
 
 Serão necessárias cinco classes:
 
@@ -13,7 +13,7 @@ Serão necessárias cinco classes:
 - Atributos: Nome, Endereço e CNPJ
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> Para cadastrar a loja, foi passado informações como o nome da loja, o endereço da loja e seu CNPJ.
+    - Para cadastrar a loja, foi passado informações como o nome da loja, o endereço da loja e seu CNPJ.
     
     </aside>
     
@@ -26,7 +26,7 @@ Serão necessárias cinco classes:
 - Atributos: Nome, Data de Nascimento, CPF, Endereço e Senha.
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> Para cadastrar os clientes, foram passados o nome do cliente, sua data de nascimento, seu CPF, endereço e senha para login.
+    - Para cadastrar os clientes, foram passados o nome do cliente, sua data de nascimento, seu CPF, endereço e senha para login.
     
     </aside>
     
@@ -38,7 +38,7 @@ Serão necessárias cinco classes:
     - A partir dessa classe que os produtos podem ser criados.
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> Passando informações como o nome do produto, sua descrição e seu valor
+    - Passando informações como o nome do produto, sua descrição e seu valor
     
     </aside>
     
@@ -48,14 +48,14 @@ Serão necessárias cinco classes:
 - Atributos: User, Senha.
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> São passados user e senha para os ADMs poderem entrar no sistema da loja.
+    - São passados user e senha para os ADMs poderem entrar no sistema da loja.
     
     </aside>
     
 - Métodos: Cadastrar Cliente, Cadastrar ADM, Cadastrar Produto, Excluir Produto, Excluir Cliente, Excluir ADM, Listar Produtos, Listar Clientes, Listar ADMs.
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> Algumas das funções que o ADM pode executar são essas.
+    - Algumas das funções que o ADM pode executar são essas.
     
     </aside>
     
@@ -65,7 +65,7 @@ Serão necessárias cinco classes:
 - Atributos: Nome, Valor, Descrição.
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> Aqui será armazenado os produtos que serão comprados pelo cliente
+    - Aqui será armazenado os produtos que serão comprados pelo cliente
     
     </aside>
     
@@ -77,7 +77,7 @@ O projeto é baseado em três interfaces:
     - 02 → Login Cliente
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> A Tela 1 é onde fica o login do usuário e do ADM
+    - A Tela 1 é onde fica o login do usuário e do ADM
     
     </aside>
     
@@ -91,10 +91,10 @@ O projeto é baseado em três interfaces:
     - 07 → Listar Produtos
     
     <aside>
-    <img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> A Tela 2 é onde fica o menu do ADM, que é acessada, onde mostra as funções que ele pode executar como:
+    - A Tela 2 é onde fica o menu do ADM, que é acessada, onde mostra as funções que ele pode executar como:
     
     <aside>
-    <img src="/icons/map-pin_yellow.svg" alt="/icons/map-pin_yellow.svg" width="40px" />  Cadastrar clientes, ADMs e os produtos, além de excluir os clientes e os produtos, e lista-los
+    - Cadastrar clientes, ADMs e os produtos, além de excluir os clientes e os produtos, e lista-los
     
     </aside>
     
@@ -107,10 +107,10 @@ O projeto é baseado em três interfaces:
     - 04 → Ver Carrinho
 
 <aside>
-<img src="/icons/map-pin_red.svg" alt="/icons/map-pin_red.svg" width="40px" /> A Tela 3 é onde fica o menu do cliente, que é acessada após o login, onde mostra as funções que ele pode executar como:
+- A Tela 3 é onde fica o menu do cliente, que é acessada após o login, onde mostra as funções que ele pode executar como:
 
 <aside>
-<img src="/icons/map-pin_yellow.svg" alt="/icons/map-pin_yellow.svg" width="40px" /> Adicionar um produto ao carrinho, tirar ele do carrinho, listar os produtos disponíveis e ver o carrinho
+- Adicionar um produto ao carrinho, tirar ele do carrinho, listar os produtos disponíveis e ver o carrinho
 
 </aside>
 

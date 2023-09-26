@@ -24,6 +24,7 @@ class Cliente:
         self.endereco = endereço
         self.senhacli = senha
         self.id = idc
+        
     
     def getNome(self):
         return self.nome
@@ -45,11 +46,12 @@ class Cliente:
 
 
 class Produto:
-    def __init__(self, nome_produto, descricao, valor, idp):
+    def __init__(self, nome_produto, descricao, valor, idp, qtd):
         self.nome_produto = nome_produto
         self.descricao = descricao
         self.valor = valor
         self.idp = idp
+        self.qtd = qtd
 
     def get_nome_produto(self):
         return self.nome_produto
@@ -62,22 +64,27 @@ class Produto:
 
     def get_idp(self):
         return self.idp
-        
 
 class Carrinho:
-    def __init__(self, nome, valor, descricao):
-        self.nome = nome
-        self.valor = valor
-        self.descricao = descricao
-    
-    def get_nome(self):
-        return self.nome
 
-    def get_valor(self):
-        return self.valor
+    lista_compra = []
 
-    def get_descricao(self):
-        return self.descricao
+    def inserir_produto(self, produto):
+        self.produto = produto
+        self.lista_compra.append(self.produto)
+
+    def listar_produtos(self):
+        cont = 0
+        for produto in self.lista_compra:
+            cont += 1
+            print(f"{cont}) Nome: {produto.getNome()} | Valor: {produto.getValor()}")
+
+    def getLista(self, vetor):
+        return self.lista_compra[vetor]
+
+    def delProduto(self, vetor):
+        self.vetor_lista = vetor - 1
+        self.lista_compra.pop(self.vetor_lista)
         
 class Loja:
     def __init__(self, nome, endereco, cnpj):
@@ -106,7 +113,6 @@ class Loja:
     def inserir_adm(self, valor):
         vetor = len(self.adm) + 1
         self.adm[vetor] = valor
-
 
     def listarClientes(self):
         for chave, cliente in self.clientes.items():

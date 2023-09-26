@@ -19,7 +19,7 @@ while sair == False:
         print(" [2] - LOGIN CLIENTE")
         print(" [3] - SAIR")
 
-        menu = int(input("\nDigite a opção desejada:  "))
+        menu = int(input("\nDigite a opção desejada: "))
         os.system("cls")
         
 
@@ -63,7 +63,7 @@ while sair == False:
 
                                 cliente = cliente(nome, cpf, idade, endereco, senha, idc)
                                 loja.inserir_cliente(cliente, idc)
-                                print("\nCliente cadastrado com sucesso!")
+                                print("\nCliente cadastrado com sucesso!\n")
                                 os.system("pause")
                                 os.system("cls")
 
@@ -78,7 +78,7 @@ while sair == False:
 
                                 adm = Adm(user, senhaa, 0)
                                 loja.inserir_adm(adm)
-                                print("\nADM cadastrado com sucesso!")
+                                print("\nADM cadastrado com sucesso!\n")
                                 os.system("pause")
                                 os.system("cls")
 
@@ -92,11 +92,12 @@ while sair == False:
                                 nome_produto = input("NOME DO PRODUTO: ")
                                 descricao = input("DESCRIÇÃO DO PRODUTO: ")
                                 valor = float(input("VALOR: "))
+                                qtd = int(input("QUANTIDADE: "))
 
-                                produto = produto(nome_produto, descricao, valor, idp)
+                                produto = produto(nome_produto, descricao, valor, idp, qtd)
 
                                 loja.inserir_produto(produto, idp)
-                                print("\nProduto cadastrado com sucesso!")
+                                print("\nProduto cadastrado com sucesso!\n")
                                 os.system("pause")
                                 os.system("cls")
 
@@ -105,7 +106,7 @@ while sair == False:
                                 print("---  EXCLUIR PRODUTO ---\n")
                                 loja.listarProdutos()
                                 excluir = int(input("\nDigite a opção que deseja excluir: "))
-                                loja.excluir_produto(excluir)
+                                print("")
                                 os.system("pause")
                                 os.system("cls")
                             case 5:
@@ -114,13 +115,14 @@ while sair == False:
                                 loja.listarClientes()
                                 excluirc = int(input("Digite o id do cliente que deseja excluir: "))
                                 loja.excluir_cliente(excluirc)
-                                loja.listarClientes()
+                                print("")
                                 os.system("pause")
                                 os.system("cls")
                             case 6:
                                 os.system("cls")
                                 print("--- LISTA DE CLIENTES ---\n")
                                 loja.listarClientes()
+                                print("")
                                 os.system("pause")
                                 os.system("cls")
                                 
@@ -128,6 +130,7 @@ while sair == False:
                                 os.system("cls")
                                 print("--- LISTA DE PRODUTOS ---\n")
                                 loja.listarProdutos()
+                                print("")
                                 os.system("pause")
                                 os.system("cls")
                             case 8:
@@ -136,6 +139,8 @@ while sair == False:
 
                             case _:
                                 print("Opção inválida.")
+                                os.system("pause")
+                                os.system("cls")
                         
                 else:
                     print("Credenciais inválidas. Tente novamente.")
@@ -151,10 +156,14 @@ while sair == False:
                         LoginCorreto = True
                         print("")
                         os.system("pause")
+                
+                if LoginCorreto == True:
+                    
 
-            case 3:  
+ystem("cls")
+                    print("")            case 3:  
                 print("SAINDO...")
-                sair = True
+                sair .s= True
             case _:
                 print("Opção inválida.")
                 
