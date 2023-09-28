@@ -19,7 +19,7 @@ Serão necessárias cinco classes:
 
 ## Classe Cliente
 
-- Atributos: Nome, Data de Nascimento, CPF, Endereço e Senha.
+- Atributos: Nome, CPF, Idade, Endereço e Senha.
 - Para cadastrar os clientes, foram passados o nome do cliente, sua data de nascimento, seu CPF, endereço e senha para login.
     
     
@@ -28,7 +28,7 @@ Serão necessárias cinco classes:
 
 ## Classe Produto
 
-- Atributos: Nome, Descrição e Valor.
+- Atributos: Nome, Descrição, Valor, Quantidade
     - A partir dessa classe que os produtos podem ser criados.  
         - Passando informações como o nome do produto, sua descrição e seu valor
     
@@ -50,6 +50,7 @@ O projeto é baseado em três interfaces:
 - **Tela 1:**
     - 01 → Login ADM
     - 02 → Login Cliente
+    - 03 → Sair
     
     - A Tela 1 é onde fica o login do usuário e do ADM
     
@@ -62,6 +63,7 @@ O projeto é baseado em três interfaces:
     - 05 → Excluir Cliente
     - 06 → Listar Clientes
     - 07 → Listar Produtos
+    - 08 → Relatório
     
     - A Tela 2 é onde fica o menu do ADM, que é acessada, onde mostra as funções que ele pode executar como:
     
@@ -144,7 +146,7 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
         
         - Nome
         - Descrição 
-        - Valor
+        - Valor 
 
 **Tela 3**
 
@@ -166,6 +168,15 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
     A opção "Ver Carrinho" realiza a listagem dos produtos criados e cadastrados na loja, exibindo o nome do produto e a quantidade existente.
 
 **Relatório**
+
+    O Relatório possui duas opções:
+
+    - Total de vendas
+    - Todas as compras do cliente
+
+    A opção "Total de vendas" exibe todas as compras realizadas na loja, exibindo todos os produtos comprados por cada cliente de forma geral. 
+
+    A opção "Todas as compras do cliente" exibe todas as compras de um cliente específico, exibindo os produtos comprados de forma individual.**Relatório**
 
     O Relatório possui duas opções:
 
