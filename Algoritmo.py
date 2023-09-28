@@ -51,11 +51,17 @@ def main():
                                     endereco = input("ENDEREÇO: ")
                                     senha = input("SENHA: ")
 
-                                    cliente = Cliente(nome, cpf, idade, endereco, senha, idc)
-                                    loja.inserir_cliente(cliente, idc)
-                                    print("\nCliente cadastrado com sucesso!\n")
-                                    os.system("pause")
-                                    os.system("cls")
+                                    if idade >=18:
+
+                                        cliente = Cliente(nome, cpf, idade, endereco, senha, idc)
+                                        loja.inserir_cliente(cliente, idc)
+                                        print("\nCliente cadastrado com sucesso!\n")
+                                        os.system("pause")
+                                        os.system("cls")
+                                    else:
+                                        print("Desculpe, você não atende aos requisitos de idade para se cadastrar.")
+                                        os.system("pause")
+                                        os.system("cls")
 
                                 case 2:
                                     os.system("cls")
@@ -188,7 +194,7 @@ def main():
 
                         else:
                             print("Credenciais inválidas. Tente novamente.")   
-                                        
+
                 case 3:  
                     sair = True
                         
