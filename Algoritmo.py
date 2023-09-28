@@ -16,14 +16,10 @@ def main():
         loginCorreto = False
         try:
             os.system("cls")
-            print(" --- BEM VINDO(A) AO VS STORE --- \n")
-            print(" [1] - LOGIN ADM")
-            print(" [2] - LOGIN CLIENTE")
-            print(" [3] - SAIR")
-
+            print(" --- BEM VINDO(A) AO VS STORE --- \n[1] - LOGIN ADM \n[2] - LOGIN CLIENTE \n[3] - SAIR")
             menu = int(input("\nDigite a opção desejada: "))
             os.system("cls")
-            
+                
 
             match menu:
                 case 1:
@@ -37,17 +33,9 @@ def main():
 
                     if loginCorreto == True:
                         os.system("cls")
-                    
+                        
                         while menu_adm == 0:
-                            print("--- MENU DO ADM --- \n")
-                            print("[1] - CADASTRAR CLIENTE")
-                            print("[2] - CADASTRAR ADM")
-                            print("[3] - CADASTRAR PRODUTO")
-                            print("[4] - EXCLUIR PRODUTO")
-                            print("[5] - EXCLUIR CLIENTE")                     
-                            print("[6] - LISTAR CLIENTE")
-                            print("[7] - LISTAR PRODUTO")
-                            print("[8] - VOLTAR")
+                            print("--- MENU DO ADM --- \n[1] - CADASTRAR CLIENTE \n[2] - CADASTRAR ADM \n[3] - CADASTRAR PRODUTO \n[4] - EXCLUIR PRODUTO \n[5] - EXCLUIR CLIENTE \n[6] - LISTAR CLIENTE \n[7] - LISTAR PRODUTO \n[8] - VOLTAR")
                             op_adm = int(input("\nDigite a opção desejada: "))
 
                             match op_adm:
@@ -55,7 +43,7 @@ def main():
                                     os.system("cls")
                                     contID += 1
                                     idc = contID
-                                    
+                                        
                                     print("--- CADASTRO DE CLIENTE --- \nPreencha as informações:\n")
                                     nome = input("NOME: ")
                                     cpf = int(input("CPF: "))
@@ -63,7 +51,7 @@ def main():
                                     endereco = input("ENDEREÇO: ")
                                     senha = input("SENHA: ")
 
-                                    cliente = cliente(nome, cpf, idade, endereco, senha, idc)
+                                    cliente = Cliente(nome, cpf, idade, endereco, senha, idc)
                                     loja.inserir_cliente(cliente, idc)
                                     print("\nCliente cadastrado com sucesso!\n")
                                     os.system("pause")
@@ -74,7 +62,7 @@ def main():
                                     print("--- CADASTRO ADM--- \nPreencha as informações:\n")
                                     admID +=1
                                     ida = admID
-                                    
+                                        
                                     user = input("USER: ")
                                     senhaa = input("SENHA: ")
 
@@ -89,16 +77,16 @@ def main():
                                     os.system("cls")
                                     pdtID += 1
                                     idp = pdtID
-                                    
+                                        
                                     print("--- CADASTRO DE PRODUTO --- \nPreencha as informações:\n")
                                     nome_produto = input("NOME DO PRODUTO: ")
                                     descricao = input("DESCRIÇÃO DO PRODUTO: ")
                                     valor = float(input("VALOR: "))
                                     qtd = int(input("QUANTIDADE: "))
 
-                                    produto = produto(nome_produto, descricao, valor, idp, qtd)
-
+                                    produto = Produto(nome_produto, descricao, valor, idp, qtd)
                                     loja.inserir_produto(produto, idp)
+                                
                                     print("\nProduto cadastrado com sucesso!\n")
                                     os.system("pause")
                                     os.system("cls")
@@ -111,6 +99,7 @@ def main():
                                     print("")
                                     os.system("pause")
                                     os.system("cls")
+                                    
                                 case 5:
                                     os.system("cls")
                                     print("---  EXCLUIR CLIENTE ---\n")
@@ -127,7 +116,7 @@ def main():
                                     print("")
                                     os.system("pause")
                                     os.system("cls")
-                                    
+                                        
                                 case 7:
                                     os.system("cls")
                                     print("--- LISTA DE PRODUTOS ---\n")
@@ -143,7 +132,7 @@ def main():
                                     print("Opção inválida.")
                                     os.system("pause")
                                     os.system("cls")
-                            
+                                
                     else:
                         print("Credenciais inválidas. Tente novamente.")
                 case 2:
@@ -159,16 +148,12 @@ def main():
                             cliente_atual = nome
                             print("")
                             os.system("pause")
-                    
-                    if LoginCorreto == True:
-                            os.system("cls")
-                            print("--- MENU DO CLIENTE --- \n")
-                            print("[1] - LISTA DE PRODUTOS")
-                            print("[2] - ADICIONAR PRODUTO AO CARRINHO")
-                            print("[3] - EXCLUIR PRODUTO DO CARRINHO")
-                            print("[4] - MEU CARRINHO")
-                            print("[5] - VOLTAR")
-                            op_cli = int(input("\nDigite a opção desejada: ")) 
+                        
+                        if LoginCorreto == True:
+                            while menu_cli == 0:
+                                os.system("cls")
+                                print("--- MENU DO CLIENTE --- \n[1] - LISTA DE PRODUTOS \n[2] - ADICIONAR PRODUTO AO CARRINHO \n[3] - EXCLUIR PRODUTO DO CARRINHO \n[4] - MEU CARRINHO \n[5] - VOLTAR")
+                                op_cli = int(input("\nDigite a opção desejada: ")) 
 
                             match op_cli:
                                 case 1:
@@ -182,12 +167,12 @@ def main():
                                     cliente_atual.adicionar_ao_carrinho(vetor_produto, quantidade)
                                     os.system("pause")
                                     os.system("cls")
-                                
+                                    
                                 case 3:
                                     pass
 
                                 case 4:
-                                    #loja.listarCarrinho()
+                                    
                                     pass
 
                                 case 5:
@@ -195,15 +180,17 @@ def main():
 
                                 case _:
                                     print("Opção inválida")
-                                    
+                                        
                 case 3:  
                     sair = True
-                    
+                        
                 case _:
                     print("Opção inválida.")
-                    
+                        
         except Exception as erro:
                 print("Opção inválida.")
                 print("Erro:", erro.__class__.__name__)
                 os.system("pause")
                 os.system("cls")
+
+

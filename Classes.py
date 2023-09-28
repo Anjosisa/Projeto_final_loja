@@ -44,29 +44,7 @@ class Cliente:
     def getId(self):
         return self.id
 
-    def inserir_produto(self, produto, qtd):
-        self.produto = produto
-        self.qtdp = qtd
-        self.lista_compra.append(self.produto)
-        print(f"{produto.get_nome_produto()} foi adicionado ao carrinho.")
-
-    def listar_produtos(self):
-        cont = 0
-        if len(self.carrinho) == 0:
-            print("Seu carrinho está vazio.")
-        else:
-            print("Itens no carrinho:\n")
-            for produto in self.carrinho:
-                cont += 1
-                print(f"Nome: {produto.get_nome_produto()} | Valor: R${produto.get_valor()}")
-        
-
-    def getLista(self, vetor):
-        return self.lista_compra[vetor]
-
-    def delProduto(self, vetor):
-        self.vetor_lista = vetor - 1
-        self.lista_compra.pop(self.vetor_lista)
+    
 
 
 class Produto:
@@ -88,7 +66,14 @@ class Produto:
 
     def get_idp(self):
         return self.idp
-        
+
+    def getQTd(self):
+        return self.qtdp
+    
+    def setQtd(self, new_qtd):
+        self.qtd = new_qtd
+
+
 class Loja:
     def __init__(self, nome, endereco, cnpj):
         self.nome = nome 
@@ -133,8 +118,33 @@ class Loja:
         self.vetorc = vetorc-1
         return self.clientes.pop(vetorc)
     
+    def adicionar_ao_carrinho(self, produto, qtd):
+        self.produto = produto
+        self.qtdp = qtd
+        self.lista_compra.append(self.produto)
+        print(f"{produto.get_nome_produto()} foi adicionado ao carrinho.")
+
+    def listar_produtos(self):
+        cont = 0
+        if len(self.carrinho) == 0:
+            print("Seu carrinho está vazio.")
+        else:
+            print("Itens no carrinho:\n")
+            for produto in self.carrinho:
+                cont += 1
+                print(f"Nome: {produto.get_nome_produto()} | Valor: R${produto.get_valor()}")
+        
+
+    def getLista(self, vetor):
+        return self.lista_compra[vetor]
+
+    def delProduto(self, vetor):
+        self.vetor_lista = vetor - 1
+        self.lista_compra.pop(self.vetor_lista)
+    
 
 
 loja = Loja("VS STORE", "Av. das Codificações, Nº1011", 123456789)
 master = Adm("adm", "admin123",0)
 loja.inserir_adm(master)
+
