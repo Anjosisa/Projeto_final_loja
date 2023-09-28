@@ -142,7 +142,7 @@ def main():
                     else:
                         print("Credenciais inválidas. Tente novamente.")
                 case 2:
-                    loginCorreto = False
+                    loginCorretoCli = False
                     os.system("cls")
                     print("--- LOGIN CLIENTE ---")
                     cpf_cliente = int(input("Digite o CPF: "))
@@ -150,12 +150,11 @@ def main():
 
                     for vetor, cpf in loja.clientes.items():
                         if cpf.getCpf() == cpf_cliente and cpf.get_Senha() == senha_cliente:
-                            LoginCorreto = True
+                            LoginCorretoCli = True
                             cliente_atual = cpf
-                            print("")
-                            os.system("pause")
+                            
                         
-                        if LoginCorreto == True:
+                        if LoginCorretoCli == True:
                             while menu_cli == 0:
                                 os.system("cls")
                                 print("--- MENU DO CLIENTE --- \n[1] - LISTA DE PRODUTOS \n[2] - ADICIONAR PRODUTO AO CARRINHO \n[3] - EXCLUIR PRODUTO DO CARRINHO \n[4] - MEU CARRINHO \n[5] - VOLTAR")
@@ -211,6 +210,7 @@ def main():
 
                                     case 5:
                                         menu_cli = 1
+                                        
 
                                     case _:
                                         print("Opção inválida")

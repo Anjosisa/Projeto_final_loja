@@ -45,9 +45,14 @@ class Cliente:
         return self.id
 
     def adicionar_ao_carrinho(self, produto, qtd):
-        produto_carrinho = (produto, qtd)
-        self.carrinho.append(produto_carrinho)
-        print(f"{produto.get_nome_produto()} foi adicionado ao carrinho.")
+        if produto.qtd >= qtd:  # Check if there is enough quantity in the store
+            produto_carrinho = (produto, qtd)
+            self.carrinho.append(produto_carrinho)
+            produto.setQtd(produto.qtd - qtd)  # Decrease the product's quantity in the store
+            print(f"{qtd} {produto.get_nome_produto()} foi adicionado ao carrinho.")
+        else:
+            print(f"Não há estoque suficiente de {produto.get_nome_produto()}.")
+
 
     def meu_carrinho(self):
         if not self.carrinho:
@@ -86,8 +91,8 @@ class Produto:
     def get_idp(self):
         return self.idp
 
-    def getQTd(self):
-        return self.qtdp
+    def getQtd(self):
+        return self.qtd
     
     def setQtd(self, new_qtd):
         self.qtd = new_qtd
@@ -127,7 +132,7 @@ class Loja:
 
     def listarProdutos(self):
         for chave, produto in self.produtos.items():
-            print(f"ID:{chave} - Nome: {produto.get_nome_produto()} - Descrição: {produto.get_descricao()} - Valor: R${produto.get_valor()}")
+            print(f"ID:{chave} - Nome: {produto.get_nome_produto()} - Descrição: {produto.get_descricao()} - Valor: R${produto.get_valor()} - Quantidade {produto.getQtd()}") 
     
     def excluir_produto(self, vetor):
         self.vetor = vetor-1
