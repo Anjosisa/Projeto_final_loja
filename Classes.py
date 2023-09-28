@@ -45,8 +45,6 @@ class Cliente:
         return self.id
 
     
-
-
 class Produto:
     def __init__(self, nome_produto, descricao, valor, idp, qtd):
         self.nome_produto = nome_produto

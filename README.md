@@ -16,7 +16,6 @@ Serão necessárias cinco classes:
     
 - Métodos: Dicionários de Cliente, Produto e ADMs.
 
----
 
 ## Classe Cliente
 
@@ -25,6 +24,7 @@ Serão necessárias cinco classes:
     
     
 - Métodos: Dicionário de Adicionar Produto e a parte de Excluir Produto
+
 
 ## Classe Produto
 
@@ -50,6 +50,7 @@ Serão necessárias cinco classes:
 - Atributos: Nome, Valor, Descrição.
     - Aqui será armazenado os produtos que serão comprados pelo cliente
     
+----------------------------------------------------------------------------------------------------------------
 
 O projeto é baseado em três interfaces:
 
@@ -108,11 +109,11 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
 
 **Tela 1**
 
-    Quando se inicializa o código ele exibe a 'Tela 1' , a tela de login, nela há três opções, na primeira opção é onde o login como ADM é realizado, pedindo apenas o user e a senha. Na segunda opção é onde o login como cliente é realizado, pedindo o CPF e a senha, e a terceira opção é para sair do programa.
+    Quando se inicializa o código, ele exibe a 'Tela 1' , a tela de login. Nela, há três opções. Na primeira opção é onde o login como ADM é realizado, pedindo apenas o user e a senha. Na segunda, opção é onde o login como cliente é realizado, pedindo o CPF e a senha, e a terceira opção, para sair do programa.
 
 **Tela 2**
 
-    Após a realização do login do ADM, é exibida a 'Tela 2' onde o é apresentado todas as ações que o ADM pode realizar.
+    Após a realização do login do ADM, é exibida a 'Tela 2', onde é apresentado todas as ações que o ADM pode realizar.
 
         Na opção "Cadastro Cliente" é feito o cadastro dos clientes, criando suas contas na loja, e para criar é pedido informações como:
 
@@ -146,7 +147,7 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
         - Endereço 
         - Senha
 
-        A opção "Listar Produto" realiza a listagem dos produtos que o cliente colocou em seu carrinho e exibe as seguintes informações de cada produto
+        A opção "Listar Produto" realiza a listagem dos produtos que o cliente colocou em seu carrinho e exibe as seguintes informações de cada produto:
         
         - Nome
         - Descrição 
@@ -154,7 +155,7 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
 
 **Tela 3**
 
-    Após a realização do login do cliente, é exibida a 'Tela 3' onde é apresentado todas as ações que o cliente pode realizar.
+    Após a realização do login do cliente, é exibida a 'Tela 3', onde é apresentado todas as ações que o cliente pode realizar.
 
     A opção "Adicionar Produto" é onde adiciona um produto ao carrinho do cliente, para adicionar o produto é pedido informações como:
 
