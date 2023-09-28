@@ -147,4 +147,3 @@ class Loja:
 loja = Loja("VS STORE", "Av. das Codificações, Nº1011", 123456789)
 master = Adm("adm", "admin123",0)
 loja.inserir_adm(master)
-

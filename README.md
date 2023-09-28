@@ -10,7 +10,7 @@ Serão necessárias cinco classes:
 
 ## Classe Loja
 
-- Atributos: Nome, Endereço e CN
+- Atributos: Nome, Endereço e CNPJ
     - Para cadastrar a loja, foi passado informações como o nome da loja, o endereço da loja e seu CNPJ.
     
     
@@ -104,17 +104,17 @@ No Relatório será feito um registro de todas as compras do Cliente e mostradas
 
 ## Como Funciona?
 
-Para começar nosso código é fundamentado na ideia de que já existe um ADM criado na loja, e a partir desse ADM ele podera criar novas contas de ADMs e de usuários.
+Para começar nosso código é fundamentado na ideia de que já existe um ADM criado na loja, e a partir desse ADM ele poderá criar novas contas de ADMs e de usuários.
 
 **Tela 1**
 
-    Quando se inicializa o código ele mostra a 'Tela 1' , a tela de login, nela há três opções, na primeira opção é onde o login como ADM é realizado, colocando apenas seu user e sua senha. Na segunda opção é onde o login como cliente é realizado, colocando se o CPF e a senha, e a terceira opção é para sair do programa.
+    Quando se inicializa o código ele exibe a 'Tela 1' , a tela de login, nela há três opções, na primeira opção é onde o login como ADM é realizado, pedindo apenas o user e a senha. Na segunda opção é onde o login como cliente é realizado, pedindo o CPF e a senha, e a terceira opção é para sair do programa.
 
 **Tela 2**
 
-    Após a realização do login do ADM, visualiza-se a 'Tela 2' onde o é mostrado todas as ações/funções que o ADM pode realizar.
+    Após a realização do login do ADM, é exibida a 'Tela 2' onde o é apresentado todas as ações que o ADM pode realizar.
 
-        A opção "Cadastro Cliente" é feito o cadastro dos clientes, criando suas contas na loja, e para criar é pedido informações como:
+        Na opção "Cadastro Cliente" é feito o cadastro dos clientes, criando suas contas na loja, e para criar é pedido informações como:
 
         - Nome
         - CPF 
@@ -122,23 +122,23 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
         - Endereço 
         - Senha
 
-        A opção "Cadastrar ADM" é realizada o cadastro de um ADM, criando suas contas na loja, pedindo informações como:
+        A opção "Cadastrar ADM" realiza o cadastro de um ADM, criando a conta na loja do novo ADM, e necessita informações como:
 
         - User
         - Senha
 
-        A opção "Cadastrar Produto" é realizado o cadastro dos Produtos, criando eles na loja, e para cria-los pede informações como:
+        A opção "Cadastrar Produto" realiza o cadastro dos Produtos, criando os produtos na loja, e para cria-los é necessárias informações como:
 
         - Nome
         - Descrição
         - Valor
         - Quantidade
 
-        A opção "Excluir Produto" é realizada a exclusão dos produtos da loja.
+        A opção "Excluir Produto" realiza a exclusão dos produtos da loja.
 
-        A opção "Excluir Cliente" é realizada a exclusão dos clientes do sistema da loja.
+        A opção "Excluir Cliente" realiza a exclusão dos clientes do sistema da loja.
 
-        A opção "Listar Cliente" é realizada a listagem dos clientes e exibe as seguintes informações de cada cliente:
+        A opção "Listar Cliente" realiza a listagem dos clientes e exibe as seguintes informações de cada cliente:
 
         - Nome
         - CPF 
@@ -146,7 +146,7 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
         - Endereço 
         - Senha
 
-        A opção "Listar Produto" é realizada a listagem dos produtos que o cliente colocou em seu carrinho e exibe as seguintes informações de cada produto
+        A opção "Listar Produto" realiza a listagem dos produtos que o cliente colocou em seu carrinho e exibe as seguintes informações de cada produto
         
         - Nome
         - Descrição 
@@ -154,30 +154,30 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
 
 **Tela 3**
 
-    Após a realização do login do cliente, visualiza-se a 'Tela 3' onde é mostrada todas as funções/ações que o cliente pode realizar.
+    Após a realização do login do cliente, é exibida a 'Tela 3' onde é apresentado todas as ações que o cliente pode realizar.
 
     A opção "Adicionar Produto" é onde adiciona um produto ao carrinho do cliente, para adicionar o produto é pedido informações como:
 
     - ID do produto
     - Quantidade
 
-    A opção "Excluir Produto" é realizada a exclusão dos produtos do carrinho do cliente .
+    A opção "Excluir Produto" realiza a remoção dos produtos do carrinho do cliente .
 
-    A opção "Listar Produto" é realizada a listagem dos produtos que o cliente colocou em seu carrinho e exibe as seguintes informações de cada produto:
+    A opção "Listar Produto" realiza a listagem dos produtos que o cliente colocou em seu carrinho e exibe as seguintes informações de cada produto:
     
     - Nome
     - Descrição 
     - Valor
 
-    A opção "Ver carrinho" é realizada a listagem dos produtos criados e cadastrados na loja, exibindo o nome do produto e a quantidade existente na loja.
+    A opção "Ver Carrinho" realiza a listagem dos produtos criados e cadastrados na loja, exibindo o nome do produto e a quantidade existente.
 
 **Relatório**
 
-    No Relatório tem duas opções:
+    O Relatório possui duas opções:
 
     - Compras Clientes
     - Vendas Realizadas
 
-    A opção "Compras Clientes" exibe todas as compras do cliente exibindo os produtos comprados, de forma individual.
+    A opção "Compras Clientes" exibe todas as compras de um cliente específico, exibindo os produtos comprados de forma individual.
 
     A opção "Vendas Realizadas" exibe todas as compras realizadas na loja, exibindo todos os produtos comprados por cada cliente de forma geral. 

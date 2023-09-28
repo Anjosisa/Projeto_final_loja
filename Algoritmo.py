@@ -155,31 +155,39 @@ def main():
                                 print("--- MENU DO CLIENTE --- \n[1] - LISTA DE PRODUTOS \n[2] - ADICIONAR PRODUTO AO CARRINHO \n[3] - EXCLUIR PRODUTO DO CARRINHO \n[4] - MEU CARRINHO \n[5] - VOLTAR")
                                 op_cli = int(input("\nDigite a opção desejada: ")) 
 
-                            match op_cli:
-                                case 1:
-                                    pass
+                                match op_cli:
+                                    case 1:
+                                        os.system("cls")
+                                        print("--- LISTA DE PRODUTOS ---\n")
+                                        loja.listarProdutos()
+                                        print("")
+                                        os.system("pause")
+                                        os.system("cls")
 
-                                case 2:
-                                    os.system("cls")
-                                    loja.listarProdutos()
-                                    vetor_produto = int(input("Digite o ID do produto que deseja adicionar ao carrinho: "))
-                                    quantidade = int(input("Digite a quantidade desejada: "))
-                                    cliente_atual.adicionar_ao_carrinho(vetor_produto, quantidade)
-                                    os.system("pause")
-                                    os.system("cls")
-                                    
-                                case 3:
-                                    pass
+                                    case 2:
+                                        os.system("cls")
+                                        loja.listarProdutos()
+                                        vetor_produto = int(input("\nDigite o ID do produto que deseja adicionar ao carrinho: "))
+                                        quantidade = int(input("Digite a quantidade desejada: "))
+                                        cliente_atual.adicionar_ao_carrinho(vetor_produto, quantidade)
+                                        os.system("pause")
+                                        os.system("cls")
+                                        
+                                    case 3:
+                                        pass
 
-                                case 4:
-                                    
-                                    pass
+                                    case 4:
+                                        
+                                        pass
 
-                                case 5:
-                                    pass
+                                    case 5:
+                                        pass
 
-                                case _:
-                                    print("Opção inválida")
+                                    case _:
+                                        print("Opção inválida")
+
+                        else:
+                            print("Credenciais inválidas. Tente novamente.")   
                                         
                 case 3:  
                     sair = True
@@ -192,5 +200,3 @@ def main():
                 print("Erro:", erro.__class__.__name__)
                 os.system("pause")
                 os.system("cls")
-
-
