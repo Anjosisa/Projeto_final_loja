@@ -151,7 +151,7 @@ def main():
                     for vetor, cpf in loja.clientes.items():
                         if cpf.getCpf() == cpf_cliente and cpf.get_Senha() == senha_cliente:
                             LoginCorreto = True
-                            cliente_atual = nome
+                            cliente_atual = cpf
                             print("")
                             os.system("pause")
                         
@@ -175,19 +175,42 @@ def main():
                                         loja.listarProdutos()
                                         vetor_produto = int(input("\nDigite o ID do produto que deseja adicionar ao carrinho: "))
                                         quantidade = int(input("Digite a quantidade desejada: "))
-                                        cliente_atual.adicionar_ao_carrinho(vetor_produto, quantidade)
+                                        produto_adicionar = loja.produtos.get(vetor_produto)
+
+                                        if produto_adicionar is not None and quantidade > 0:
+                                            cliente_atual.adicionar_ao_carrinho(produto_adicionar, quantidade)
+                                        else:
+                                            print("Produto não encontrado ou quantidade inválida.")
                                         os.system("pause")
                                         os.system("cls")
                                         
                                     case 3:
-                                        pass
+                                        os.system("cls")
+                                        print("--- REMOVER PRODUTO DO CARRINHO ---\n")
+                                        cliente_atual.meu_carrinho()
+
+                                        if cliente_atual.carrinho:
+                                            try:
+                                                index = int(input("Digite o índice do produto que deseja remover do carrinho: "))
+                                                cliente_atual.remover_do_carrinho(index)
+                                            except ValueError:
+                                                print("Índice inválido. Digite um número válido.")
+                                        else:
+                                            print("Seu carrinho está vazio.")
+                                        
+                                        os.system("pause")
+                                        os.system("cls")
 
                                     case 4:
-                                        
-                                        pass
+                                        os.system("cls")
+                                        print("--- MEU CARRINHO ---\n")
+                                        cliente_atual.meu_carrinho()
+                                        print("")
+                                        os.system("pause")
+                                        os.system("cls")
 
                                     case 5:
-                                        pass
+                                        menu_cli = 1
 
                                     case _:
                                         print("Opção inválida")

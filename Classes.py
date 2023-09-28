@@ -44,6 +44,27 @@ class Cliente:
     def getId(self):
         return self.id
 
+    def adicionar_ao_carrinho(self, produto, qtd):
+        produto_carrinho = (produto, qtd)
+        self.carrinho.append(produto_carrinho)
+        print(f"{produto.get_nome_produto()} foi adicionado ao carrinho.")
+
+    def meu_carrinho(self):
+        if not self.carrinho:
+            print("Seu carrinho está vazio.")
+        else:
+            print("Itens no carrinho:\n")
+            valor_total = 0  # Inicialize o valor total como zero
+            for produto, quantidade in self.carrinho:
+                valor_item = produto.get_valor() * quantidade
+                print(f"Nome: {produto.get_nome_produto()} | Quantidade: {quantidade} | Valor unitário: R${produto.get_valor()} | Valor total do item: R${valor_item}")
+                valor_total += valor_item  # Adicione o valor do item ao valor total
+
+        print(f"\nValor total do carrinho: R${valor_total}")
+    
+    def remover_do_carrinho(self, index):
+        self.index = index-1
+        return self.carrinho.pop(index)
     
 class Produto:
     def __init__(self, nome_produto, descricao, valor, idp, qtd):
@@ -116,25 +137,7 @@ class Loja:
         self.vetorc = vetorc-1
         return self.clientes.pop(vetorc)
     
-    def adicionar_ao_carrinho(self, produto, qtd):
-        self.produto = produto
-        self.qtdp = qtd
-        self.lista_compra.append(self.produto)
-        print(f"{produto.get_nome_produto()} foi adicionado ao carrinho.")
 
-    def listar_produtos(self):
-        cont = 0
-        if len(self.carrinho) == 0:
-            print("Seu carrinho está vazio.")
-        else:
-            print("Itens no carrinho:\n")
-            for produto in self.carrinho:
-                cont += 1
-                print(f"Nome: {produto.get_nome_produto()} | Valor: R${produto.get_valor()}")
-        
-
-    def getLista(self, vetor):
-        return self.lista_compra[vetor]
 
     def delProduto(self, vetor):
         self.vetor_lista = vetor - 1
