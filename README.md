@@ -43,13 +43,6 @@ Serão necessárias cinco classes:
 - Métodos: Cadastrar Cliente, Cadastrar ADM, Cadastrar Produto, Excluir Produto, Excluir Cliente, Excluir ADM, Listar Produtos, Listar Clientes, Listar ADMs.
     - Algumas das funções que o ADM pode executar são essas.
     
-    
-
-## Classe Carrinho
-
-- Atributos: Nome, Valor, Descrição.
-    - Aqui será armazenado os produtos que serão comprados pelo cliente
-    
 ----------------------------------------------------------------------------------------------------------------
 
 O projeto é baseado em três interfaces:
@@ -176,9 +169,9 @@ Para começar nosso código é fundamentado na ideia de que já existe um ADM cr
 
     O Relatório possui duas opções:
 
-    - Compras Clientes
-    - Vendas Realizadas
+    - Total de vendas
+    - Todas as compras do cliente
 
-    A opção "Compras Clientes" exibe todas as compras de um cliente específico, exibindo os produtos comprados de forma individual.
+    A opção "Total de vendas" exibe todas as compras realizadas na loja, exibindo todos os produtos comprados por cada cliente de forma geral. 
 
-    A opção "Vendas Realizadas" exibe todas as compras realizadas na loja, exibindo todos os produtos comprados por cada cliente de forma geral. 
+    A opção "Todas as compras do cliente" exibe todas as compras de um cliente específico, exibindo os produtos comprados de forma individual.
