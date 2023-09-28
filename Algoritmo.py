@@ -211,7 +211,14 @@ def main():
                                         loja.listarProdutos()
                                         id_produto = int(input("\nDigite o ID do produto que deseja adicionar ao carrinho: "))
                                         quantidade = int(input("Digite a quantidade desejada: "))
-                                        cliente_atual.adicionar_ao_carrinho(id_produto, quantidade)
+                                        if id_produto in loja.produtos:
+                                            produto = loja.produtos[id_produto]
+                                            if produto.getQTd() >= quantidade:
+                                                cliente_atual.adicionar_ao_carrinho(id_produto, quantidade)
+                                            else:
+                                                print("Quantidade insuficiente em estoque.")
+                                        else:
+                                            print("Produto não encontrado.")
                                         os.system("pause")
                                         os.system("cls")
 
